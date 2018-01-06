@@ -1,0 +1,61 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style type="text/css">
+      body {
+        margin: 10px;
+        white-space: nowrap;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 15px;
+      }
+
+      
+      #displayTable {
+        border-collapse: collapse;
+        width: 100%;
+      }      
+      #myTable td, #myTable th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      #myTable th {
+        background-color: #ddd;
+      }
+    </style>
+ 
+  </head>
+
+  <body>
+    <h1>StockRank!</h1>
+    <div id="container">
+		<div>Enter the ticker symbol:</div>
+        <input type="text" id="symbol">
+        <button id="shoot">Shoot</button>
+    </div>
+    <div id="displayTable">
+      <table id="myTable">
+        <tr>
+          <td>Company</td>
+          <td>Stock</td>
+          <td>Rank</td>
+        </tr>
+        <tr>
+          <td id = "company"></td>
+          <td id = "prediction"></td>
+          <td id = "rank"></td>
+        </tr>
+      </table>
+    </div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="popup.js"></script>
+  </body>
+</html>

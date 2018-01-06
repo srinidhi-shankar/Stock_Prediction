@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "StockRank",
+  "description": "This extension allows the user to make an intelligent stock investment.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Check the stocks!"
+  },
+  "icons": {
+    "64": "icon.png"
+  },
+   "permissions": [
+    "https://stockpredictor.herokuapp.com/*",
+	"http://127.0.0.1:5000/*",
+    "http://*.google.com/",
+    "https://*.google.com/"
+  ],
+   "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+}
